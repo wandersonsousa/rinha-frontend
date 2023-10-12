@@ -1,0 +1,36 @@
+.root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--dark-text);
+}
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--dark-text);
+}
+.button {
+  opacity: 70%;
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-weight: 500;
+  font-size: 1rem;
+  background: linear-gradient(hsla(0, 0%, 89%, 1), hsla(0, 0%, 97%, 1));
+  cursor: pointer;
+}
+.error {
+  font-weight: 400;
+  color: hsla(0, 86%, 40%, 1);
+}

@@ -1,0 +1,9 @@
+.mt-1 {
+  margin-top: var(--base-unit);
+}
+.mt-2 {
+  margin-top: calc(var(--base-unit) * 2);
+}
+.opacity-0 {
+  opacity: 0;
+}
