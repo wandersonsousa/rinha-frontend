@@ -1,18 +1,34 @@
-.root {
+#home_page {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container {
+#jsonviewer_page {
+  display: none;
+  height: 100vh;
+  justify-content: center;
+}
+.home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.jsonviewer {
+  display: flex;
+  min-width: 50vw;
+  flex-direction: column;
+  align-items: center;
+}
 
 .title {
   font-size: 3rem;
+  font-weight: 700;
+  color: var(--dark-text);
+}
+.title-sm {
+  font-size: 2rem;
   font-weight: 700;
   color: var(--dark-text);
 }

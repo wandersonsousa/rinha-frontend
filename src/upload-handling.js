@@ -1,11 +1,14 @@
 import { hideError, showError } from "./error-handling";
+import { toJsonViewer } from "./routing";
 
-window.onload = () => {
+window.addEventListener("load", () => {
   const $jsonTnput = document.querySelector("#json_file");
+
+  // clear location hash, because we are using this to determine current page
+  history.replaceState(null, document.title, location.pathname + location.search);
 
   $jsonTnput?.addEventListener("change", function (event) {
     const uploadedFile = this.files[0];
-
     validateUploadedFile(uploadedFile);
   });
 
@@ -13,15 +16,19 @@ window.onload = () => {
     if (!validateFileExtension(file)) return showError();
 
     hideError();
+    document.title = file.name + " | JsonViewer";
+    const $title = document.querySelector("#file_title");
+    $title.textContent = file.name;
+    window.file = file;
 
-    window.location = "/json-viewer.html?name=" + file.name;
+    toJsonViewer();
   }
 
   function validateFileExtension(file) {
     const validExtensions = ["application/json"];
     return validExtensions.includes(file.type);
   }
-};
+});
 
 /*
 {

@@ -11,25 +11,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/root.css">
   <link rel="stylesheet" href="/styles/home.css">
 </head>
 
 <body class="root">
-  <div class="container">
-    <h1 class="title">JSON Tree Viewer</h1>
-    <h2 class="subtitle">Simple JSON Viewer that runs completely on-client. No data exchange</h2>
+  <div class="home_container" id="home_page">
+    <div class="home">
+      <h1 class="title">JSON Tree Viewer</h1>
+      <h2 class="subtitle">Simple JSON Viewer that runs completely on-client. No data exchange</h2>
 
-    <label class="input-button mt-1">
-      <input type="file" name="json_file" id="json_file">
-      Load JSON
-    </label>
+      <label class="input-button mt-1">
+        <input type="file" name="json_file" id="json_file">
+        Load JSON
+      </label>
 
-    <em class="error mt-2 opacity-0" id="error">Invalid file. Please load a valid JSON file.</em>
+      <em class="error mt-2 opacity-0" id="error">Invalid file. Please load a valid JSON file.</em>
+    </div>
+  </div>
+  <div class="jsonviewer_container" id="jsonviewer_page">
+    <div class="jsonviewer mt-2">
+      <h1 class="title-sm" id="file_title"></h1>
+      <div>
+        JSON VIEWER
+      </div>
+    </div>
   </div>
 
-  <script type="module" src="src/error-handling.js"></script>
+
   <script type="module" src="src/upload-handling.js"></script>
+  <script type="module" src="src/json-viewer.js"></script>
+
 </body>
 
 </html>

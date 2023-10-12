@@ -1,9 +1,9 @@
-const urlParams = new URLSearchParams(window.location.search);
-const fileNameParam = urlParams.get("name");
-document.title = fileNameParam + " | JsonViewer";
+import { toHome } from "./routing";
 
-window.onload = () => {
-  const $title = document.querySelector("#title");
-
-  $title.textContent = fileNameParam;
-};
+window.addEventListener("hashchange", (event) => {
+  if (window.location.hash === "#jsonviewer") {
+    if (!window.file) {
+      window.location = "/";
+    }
+  }
+});
