@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rinha de frontend</title>
+  <title>Nome do json</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,24 +12,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/styles/main.css">
-  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="/styles/json-viewer.css">
 </head>
 
 <body class="root">
-  <div class="container">
-    <h1 class="title">JSON Tree Viewer</h1>
-    <h2 class="subtitle">Simple JSON Viewer that runs completely on-client. No data exchange</h2>
-
-    <label class="input-button mt-1">
-      <input type="file" name="json_file" id="json_file">
-      Load JSON
-    </label>
-
-    <em class="error mt-2 opacity-0" id="error">Invalid file. Please load a valid JSON file.</em>
+  <div class="container mt-2">
+    <h1 class="title" id="title"></h1>
+    <div>
+      JSON VIEWER
+    </div>
   </div>
 
   <script src="src/error-handling.js"></script>
-  <script type="module" src="src/upload-handling.js"></script>
+  <script type="module" src="src/json-viewer.js"></script>
 </body>
 
 </html>
