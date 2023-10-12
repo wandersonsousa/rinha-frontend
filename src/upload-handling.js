@@ -1,3 +1,5 @@
+import { hideError, showError } from "./error-handling";
+
 window.onload = () => {
   const $jsonTnput = document.querySelector("#json_file");
 
@@ -5,10 +7,6 @@ window.onload = () => {
     const uploadedFile = this.files[0];
 
     validateUploadedFile(uploadedFile);
-
-    const path = event.target.value;
-    console.log(uploadedFile);
-    //C:\fakepath\giant.json
   });
 
   function validateUploadedFile(file) {
